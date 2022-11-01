@@ -1,0 +1,24 @@
+{
+  "name": "@sportdetect/endpoint",
+  "version": "1.0.0",
+  "description": "A request generation utility for the SportDetect APIs",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "keywords": [],
+  "author": "Startier",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^4.8.2",
+    "@types/node": "^18.7.14"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "prepare" : "npm run build",
+    "version" : "git add -A lib",
+    "postversion" : "git push && git push --tags"
+  }
+}
