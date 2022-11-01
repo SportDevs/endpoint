@@ -15,6 +15,20 @@ import endpoint from "@sportdetect/endpoint"
 const endpoint = require('@sportdetect/endpoint').default
 ```
 
+You can chain all the transforms to create a complex query, like this:
+```js
+endpoint('events')
+    .property('season_id').equals(18820)
+    .or(
+        obj => obj
+            .property('away_team_score->current').greaterThan(3)
+            .property('home_team_score->current').greaterThan(3)
+    )
+    .select('away_team_id', 'home_team_id', 'away_team_score', 'home_team_score')
+    .order(o => o.property('id').descending)
+// events?season_id=eq.18820&or=(away_team_score->current.gt.3,home_team_score->current.gt.3)&select=away_team_id,home_team_id,away_team_score,home_team_score&order=id.desc
+```
+
 ### `endpoint(name)`
 Creates an object that is associated with an endpoint.
 ```js
