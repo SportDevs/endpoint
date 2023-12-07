@@ -1,7 +1,7 @@
 {
-  "name": "@sportdetect/endpoint",
-  "version": "1.1.1",
-  "description": "A request generation utility for the SportDetect APIs",
+  "name": "@sportdevs/endpoint",
+  "version": "1.0.0",
+  "description": "A request generation utility for the SportDevs APIs and other Postgrest-compatible APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [],
@@ -17,8 +17,8 @@
   },
   "scripts": {
     "build": "npx tsc",
-    "prepare" : "npm run build",
-    "version" : "git add -A lib",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "version": "git add -A lib",
+    "postversion": "git push && git push --tags"
   }
 }
