@@ -1,6 +1,6 @@
 {
   "name": "@sportdevs/endpoint",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A request generation utility for the SportDevs APIs and other Postgrest-compatible APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
